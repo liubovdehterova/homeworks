@@ -1,10 +1,16 @@
 const chalk = require('chalk');
 const log = console.log;
-function info(...args) {
+
+const info = (...args) => {
     log(chalk.green(args));
 }
-function warm(...args) {
-    debugger;
+
+const warm = (...args) => {
     log(chalk.yellow(args));
 }
-module.exports = { info, warm };
+
+const error = (...args) => {
+        log(chalk.red(args));
+}
+
+module.exports = { info, warm, error };
